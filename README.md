@@ -25,7 +25,7 @@ This Python script provides a comprehensive solution for formatting and cleaning
 1. Clone this repository:
 
    ```
-   git clone https://github.com/yourusername/html5-formatter-cleaner.git
+   git clone https://github.com/SLDrago/html5-formatter-cleaner.git
    cd html5-formatter-cleaner
    ```
 
