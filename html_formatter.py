@@ -1,5 +1,4 @@
 import re
-from html.parser import HTMLParser
 from bs4 import BeautifulSoup, Comment
 import argparse
 import cssbeautifier
@@ -67,8 +66,8 @@ class HTMLFormatter:
 
     def handle_void_elements(self):
         for tag in self.soup.find_all():
-            if tag.name in self.void_elements:
-                tag.can_be_empty_element = True
+            if tag.name in self.void_elements and tag.is_empty_element:
+                tag.attrs['self-closed'] = True  # Handle as self-closed if empty
 
     def format_internal_css(self):
         for style in self.soup.find_all('style'):
