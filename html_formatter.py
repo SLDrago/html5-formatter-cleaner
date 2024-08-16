@@ -67,7 +67,7 @@ class HTMLFormatter:
     def handle_void_elements(self):
         for tag in self.soup.find_all():
             if tag.name in self.void_elements and tag.is_empty_element:
-                tag.attrs['self-closed'] = True  # Handle as self-closed if empty
+                tag.attrs['self-closed'] = True
 
     def format_internal_css(self):
         for style in self.soup.find_all('style'):
